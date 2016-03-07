@@ -83,6 +83,40 @@ We are here to teleport you. be ready for that.
     <meta name="twitter:description" content="We are creating first of its kind Virtual Reality experience by taking you on different expeditions on everyday when you are on a call. ">
     <meta name="twitter:image" content="medias/facebook-share.jpg">
 
+    <link rel="icon" type="image/gif" href="/medias//favicon/favicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+     <script type="text/javascript">
+      $(document).ready(function() {
+	
+		
+	 $("#mc-embedded-subscribe").click(function(){
+		 
+		 var data = {};
+			data.userName = $("#mce-FNAME").val();
+			data.userEmail = $("#mce-EMAIL").val();
+		    		 
+		 $.ajax({
+             type: "POST",
+             url: "http://128.199.96.134:8080/web/signup",
+             data: JSON.stringify(data),
+             contentType: "application/json; charset=utf-8",
+             dataType: "json",
+             crossDomain : true,
+             success: function (data, status, jqXHR) {
+                 $("#mce-FNAME").val("");
+             	 $("#mce-EMAIL").val("");
+             },
+
+             error: function (jqXHR, status) {
+                 console.log(jqXHR);
+                 alert('fail' + status.code);
+             }
+          });
+	    });
+});
+</script>
+
     <link rel="icon" type="image/gif" href="img/favicon.png">
 
     <!--[if lte IE 8]>
@@ -406,7 +440,7 @@ We are here to teleport you. be ready for that.
 		<p>We are cooking the iPhone app faster for your best experience.  Just let us know the way to contact you when it is ready. </p>
 
 
-		<form action="http://128.199.96.134:8080/web/signup" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		<form  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
 			<input type="text" value="" name="userName" class="" id="mce-FNAME" placeholder="Your Name">
 			<input type="email" value="" name="userEmail" class="required email" id="mce-EMAIL" placeholder="YOUR E-MAIL ADDRESS">
 			<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
