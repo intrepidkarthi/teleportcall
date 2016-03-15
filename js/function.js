@@ -9,6 +9,7 @@ $(document).ready(function(){
             type: "POST",
             dataType: 'json',
             data: formdata,
+            crossDomain : true,
             success: function(response) {
                  if (response.result == 'success') {
                     current_button.val('thanks!');
