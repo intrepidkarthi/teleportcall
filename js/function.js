@@ -4,6 +4,7 @@ $(document).ready(function(){
         var current_button = $(this);
         event.preventDefault();
         var formdata =  $("#mc-embedded-subscribe-form").serializeArray();
+        current_button.val('thanks!');
         $.ajax({
             url: "http://128.199.96.134/api/v1/action.php",
             type: "POST",
