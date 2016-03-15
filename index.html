@@ -90,30 +90,30 @@ We are here to teleport you. be ready for that.
       $(document).ready(function() {
 	
 		
-	 $("#mc-embedded-subscribe").click(function(){
+	 // $("#mc-embedded-subscribe").click(function(){
 		 
-		 var data = {};
-			data.userName = $("#mce-FNAME").val();
-			data.userEmail = $("#mce-EMAIL").val();
+		//  var data = {};
+		// 	data.userName = $("#mce-FNAME").val();
+		// 	data.userEmail = $("#mce-EMAIL").val();
 		    		 
-		 $.ajax({
-             type: "POST",
-             url: "http://128.199.96.134:8080/web/signup",
-             data: JSON.stringify(data),
-             contentType: "application/json; charset=utf-8",
-             dataType: "json",
-             crossDomain : true,
-             success: function (data, status, jqXHR) {
-                 $("#mce-FNAME").val("");
-             	 $("#mce-EMAIL").val("");
-             },
+		//  $.ajax({
+  //            type: "POST",
+  //            url: "http://128.199.96.134:8080/web/signup",
+  //            data: JSON.stringify(data),
+  //            contentType: "application/json; charset=utf-8",
+  //            dataType: "json",
+  //            crossDomain : true,
+  //            success: function (data, status, jqXHR) {
+  //                $("#mce-FNAME").val("");
+  //            	 $("#mce-EMAIL").val("");
+  //            },
 
-             error: function (jqXHR, status) {
-                 console.log(jqXHR);
-                 alert('fail' + status.code);
-             }
-          });
-	    });
+  //            error: function (jqXHR, status) {
+  //                console.log(jqXHR);
+  //                alert('fail' + status.code);
+  //            }
+  //         });
+	 //    });
 });
 </script>
 
@@ -155,26 +155,26 @@ We are here to teleport you. be ready for that.
 				<span class="video-button popin-button" data-popin="player">Watch video<i class="normal"></i><i class="hover"></i></span>
 			
 				<b></b> -->
-				<span>
-					<a target="_blank" href="#"><img class="play_store_image" style="width: 180px; opacity: .6;" src="img/google-play-badge.png"></a>
-					<a target="_blank" href="#"><img class="play_store_image" style="width: 180px; opacity: .6;" src="img/app-store-logo.png"></a>
+				<span class="store_logo">
+					<a target="_blank" href="#"><img class="play_store_image no-mobile desktop-playstore" style="width: 150px; opacity: .6;" src="img/google-play-badge.png"></a>
+					<a target="_blank" href="#"><img class="play_store_image iplay-store desktop-playstore" style="width: 150px; opacity: .6;" src="img/app-store-logo.png"></a>
 				</span>
 
 				<br/>
 <center>
 
-<nav >
+<nav class="kit no-mobile">
 	<ul>
 		<li id="about-button" class="popin-button" data-popin="about"><span>
 					<a target="_blank" href="https://www.google.com/get/cardboard/"><img class="play_store_image" style="width: 50px; opacity: .8;" src="img/cardboard.png"></a>&nbsp;&nbsp;&nbsp;
 				</span>
 
 
-<span>
+<span class="no-desktop">
 					<a target="_blank" href="http://www.samsung.com/global/galaxy/wearables/gear-vr/"><img class="play_store_image" style="width: 70px; opacity: .8;" src="img/gearvr.png"></a>&nbsp;&nbsp;&nbsp;
 				</span>
 
-<span>
+<span class="no-desktop">
 					<a target="_blank" href="http://www.view-master.com/en-us"><img class="play_store_image" style="width: 75px; opacity: .8;" src="img/viewmaster.png"></a>
 				</span>
 
@@ -183,6 +183,10 @@ We are here to teleport you. be ready for that.
 	</ul>
 </nav>
 
+<div class="kit no-desktop">
+		<p>Supports Google Cardboard, Samsung Gearvr and View-Master</p>
+</div>
+
 
 			
 
@@ -190,7 +194,7 @@ We are here to teleport you. be ready for that.
 				<!-- <b></b> -->
 				<!-- <span class="video-button popin-button" data-popin="player">Watch video<i class="normal"></i><i class="hover"></i></span> -->
 			</div>
-			<span class="scroll-icon"></span>
+			<span class="scroll-icon no-desktop"></span>
 		</div>
 	</div>
 
@@ -340,8 +344,8 @@ We are here to teleport you. be ready for that.
 			<div class="front">
 				
 				
-				<a href="#" target="_blank" class="button green">Download for Android</a>
-				<span class="popin-button button" data-popin="android">iPhone user ?</span>
+				<a class="popin-button button" data-popin="android" data-menu="android" target="_blank" class="button green">Download for Android</a>
+				<span class="popin-button button" data-menu="iphone" data-popin="android">iPhone user ?</span>
 
 
 				<!-- <span class="popin-button button" data-popin="android">Android user ?</span> -->
@@ -359,7 +363,7 @@ We are here to teleport you. be ready for that.
 </div>	</section>
 </section>
 
-<section class="scrollbar-container">
+<section class="scrollbar-container no-mobile">
 	<div class="scrollbar-background"></div>
 	<div class="scrollbar-track">
 		<div class="scrollbar-thumb"><div>
@@ -406,16 +410,17 @@ We are here to teleport you. be ready for that.
 
 <!-- ANDROID POPIN -->
 <div class="popin" id="android-popin">
-	<p class="title">iPhone users</p>
+	<p class="title popup-title">iPhone users</p>
 
 	<div class="content">
 		<i class="android-icon"></i>
-		<p>We are cooking the iPhone app faster for your best experience.  Just let us know the way to contact you when it is ready. </p>
+		<p class="popup-content">We are cooking the iPhone app faster for your best experience.  Just let us know the way to contact you when it is ready. </p>
 
 
-		<form  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
-			<input type="text" value="" name="userName" class="" id="mce-FNAME" placeholder="Your Name">
-			<input type="email" value="" name="userEmail" class="required email" id="mce-EMAIL" placeholder="YOUR E-MAIL ADDRESS">
+		<form action="subscribe/action.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+			<input type="hidden" value="" name="type" class="" id="mce-type" placeholder="Your Name">
+			<input type="text" value="" name="name" class="" id="mce-FNAME" placeholder="Your Name">
+			<input type="email" value="" name="email" class="required email" id="mce-EMAIL" placeholder="YOUR E-MAIL ADDRESS">
 			<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 		</form>
 
@@ -434,10 +439,10 @@ We are here to teleport you. be ready for that.
 
         <nav id="main-nav">
 	<ul>
-		<li><a href="http://www.teleportcall.com/videos" target="_blank">For Videographers</a></li>
-		<li> <a href="http://www.teleportcall.com/ads" target="_blank">VR Advertisement</a></li>
-		<li id="about-button" class="popin-button" data-popin="about"><span>About Us</span></li>
-		<li><a href="https://www.dropbox.com/s/x6euqsg3b7x863c/presskit_teleportcall.zip?dl=0" target="_blank">Presskit</a></li>
+		<li><a class="popin-button" data-menu="videographer" data-popin="android" target="_blank">For Videographers</a></li>
+		<li> <a class="popin-button for-advertiser" data-menu="advertiser" data-popin="android" target="_blank">For Advertisers</a></li>
+		<li id="about-button" class="popin-button no-mobile" data-popin="about"><span>About Us</span></li>
+		<li class="no-mobile"><a href="https://www.dropbox.com/s/x6euqsg3b7x863c/presskit_teleportcall.zip?dl=0" target="_blank">Presskit</a></li>
 	</ul>
 </nav>
 
@@ -472,6 +477,7 @@ We are here to teleport you. be ready for that.
     </script>
 
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

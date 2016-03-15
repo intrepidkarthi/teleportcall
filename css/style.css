@@ -690,6 +690,148 @@ b {
     margin-right: 10px;
 }
 
+.no-desktop{
+  display: none !important;
+}
+
+.desktop-playstore{
+  border: 2px solid white;
+  border-radius: 5px !important;
+}
+
+@media only screen and (max-width: 375px) {
+
+  .desktop-playstore{
+  border: 0px solid white !important;  
+}
+
+  #android-popin p {
+    width: 98%;
+  }
+
+  .no-desktop{
+  display: block !important;
+}
+
+  #main-nav {
+  width: 100% !important;
+  margin-left: 0px !important; 
+  left: 0px !important;
+}
+  
+  #main-nav a, #main-nav span{
+    margin: 0px !important;
+  }
+
+  .scroll-icon{
+    display: none !important;
+  }
+
+  #social-nav{
+    top: 60px !important;
+  }
+
+  #intro .front{
+    width: 97% !important;
+    left: 0 !important;
+    margin: -205px 0 !important;
+  }
+
+  .store_logo img{
+    width: 40% !important;
+    opacity: 1 !important;
+    height: 50px;
+  }
+
+  .store_logo{
+    margin-bottom: 50px !important;
+  }
+
+  .kit{
+    margin-top: 55px !important;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .iplay-store{
+      content:url("../img/app-store-logo-mobile.png");
+  }
+
+  .no-mobile{
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 436px) {
+
+  #android-popin p {
+    width: 98%;
+  }
+  .popin {
+    width: 100% !important;
+    top: 10%;
+    left: 0;
+    margin: 0px 0 0 0px;
+    padding: 1px;
+  }
+
+  .#android-popin input{
+    width: 87% !important;
+  }
+
+   .no-desktop{
+  display: block !important;
+}
+
+  #main-nav {
+  width: 100% !important;
+  margin-left: 0px !important; 
+  left: 0px !important;
+}
+
+  #main-nav a, #main-nav span{
+    margin: 0px !important;
+  }
+
+  .scroll-icon{
+    display: none !important;
+  }
+
+  #social-nav{
+    top: 60px !important;
+  }
+
+  #intro .front{
+    width: 97% !important;
+    left: 0 !important;
+    margin: -205px 0 !important;
+  }
+
+  .store_logo img{
+    width: 50% !important;
+    opacity: 1 !important;
+  }
+
+  .store_logo{
+    margin-bottom: 40px !important;
+    height: 50px;
+  }
+
+  .kit{
+    margin-top: 40px !important;
+  }
+
+  /*.iplay-store{
+    border-radius: 7px;
+    border: 1.5px solid white;
+  }*/
+
+  .no-mobile{
+    display: none !important;
+  }
+
+}
+
 /*#player-popin {
   position:fixed;
   top:0;
