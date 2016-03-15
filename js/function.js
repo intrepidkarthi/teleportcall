@@ -5,7 +5,7 @@ $(document).ready(function(){
         event.preventDefault();
         var formdata =  $("#mc-embedded-subscribe-form").serializeArray();
         $.ajax({
-            url: "subscribe/action.php",
+            url: "http://128.199.96.134/api/v1/action.php",
             type: "POST",
             dataType: 'json',
             data: formdata,
