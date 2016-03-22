@@ -1086,24 +1086,27 @@ Kimd = (function() {
     $("#mc-embedded-subscribe").val('subscribe');
     switch ($this.attr('data-menu')) {
     	case 'videographer':
+    		mixpanel.track("Videographer link clicked");
     		$('.popup-title').html('videographers');
     		$('#mce-type').val('videographers');
     		$('.popup-content').html('AWESOME WAY TO GET REWARDED FOR THE 360 DEGREE VIDEOS CAPTURED BY YOU. DROP US AN EMAIL BELOW TO REQUEST EARLY ACCESS!');
     	break;
     	case 'advertiser':
+    		mixpanel.track("Advertiser link clicked");
     		$('.popup-title').html('advertisers');
     		$('#mce-type').val('advertisers');
     		$('.popup-content').html("WE ARE COMING TO YOU SOON TO TAKE YOUR BUSINESS TO NEXT LEVEL THROUGH VIRTUAL REALITY");
     	break;
     	case 'iphone':
+    		mixpanel.track("Iphone link clicked");
     		$('.popup-title').html('iphone users');
     		$('#mce-type').val('iphone');
     		$('.popup-content').html("We are cooking the iPhone app faster for your best experience.  Just let us know the way to contact you when it is ready.");
     	break;
     	default:
-    		$('.popup-title').html('android users');
-    		$('#mce-type').val('android');
-    		$('.popup-content').html("We are cooking the Android app faster for your best experience.  Just let us know the way to contact you when it is ready.");
+    		// $('.popup-title').html('android users');
+    		// $('#mce-type').val('android');
+    		// $('.popup-content').html("We are cooking the Android app faster for your best experience.  Just let us know the way to contact you when it is ready.");
     	break;	
     }
 

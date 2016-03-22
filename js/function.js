@@ -23,6 +23,24 @@ $(document).ready(function(){
 
     });
 
+$('.about-button').click(function(){
+    mixpanel.track("About link clicked");
+});
+
+$('.presskit').click(function(){
+    mixpanel.track("About link clicked");
+    window.open("https://www.dropbox.com/s/x6euqsg3b7x863c/presskit_teleportcall.zip?dl=0", '_blank');
+});
+
+$('.android-download').click(function(event){
+    event.preventDefault();
+    mixpanel.track("Android download link clicked");
+    window.open("https://play.google.com/store/apps/details?id=com.gazematic.teleportcall", '_blank');
+});
+
+
+
+
 //     $('#videographer').click(function(){
 //         $('.popup-content').val("AWESOME WAY TO GET REWARDED FOR THE 360 DEGREE VIDEOS CAPTURED BY YOU. DROP US AN EMAIL BELOW TO 
 // REQUEST EARLY ACCESS!");

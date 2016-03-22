@@ -701,9 +701,9 @@ b {
 
 @media only screen and (max-width: 375px) {
 
-  .desktop-playstore{
+  /*.desktop-playstore{
   border: 0px solid white !important;  
-}
+}*/
 
   #android-popin p {
     width: 98%;
@@ -762,9 +762,9 @@ b {
     font-size: 12px;
   }
 
-  .iplay-store{
+  /*.iplay-store{
       content:url("../img/app-store-logo-mobile.png");
-  }
+  }*/
 
   .no-mobile{
     display: none !important;

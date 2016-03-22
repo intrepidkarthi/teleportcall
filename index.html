@@ -59,6 +59,16 @@ We are here to teleport you. be ready for that.
     <title>Teleport Call</title>
     <meta name="description" content="Virtually teleport yourself when you are on call with your pal. We are creating first of its kind Virtual Reality experience by taking you on different expeditions on everyday when you are on a call. One simple statement about the business is, it is completely free. This is the best platform to monetize your contents and best platform to advertise in 360 degrees. ">
 
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("c8e9925222630eeed7f64dde8dc6313e");</script> 
+<!-- end Mixpanel -->
+
+<script type="text/javascript">
+    mixpanel.track("Page visits");
+</script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- SOCIAL DATAS -->
@@ -156,8 +166,8 @@ We are here to teleport you. be ready for that.
 			
 				<b></b> -->
 				<span class="store_logo">
-					<a target="_blank" href="#"><img class="play_store_image no-mobile desktop-playstore" style="width: 150px; opacity: .6;" src="img/google-play-badge.png"></a>
-					<a target="_blank" href="#"><img class="play_store_image iplay-store desktop-playstore" style="width: 150px; opacity: .6;" src="img/app-store-logo.png"></a>
+					<a target="_blank" href="#"><img class="android-download play_store_image desktop-playstore" style="width: 150px; opacity: .6;" src="img/google-play-badge.png"></a>
+					<a target="_blank" href="#"><img class="play_store_image iplay-store desktop-playstore" style="width: 150px; opacity: .6;" src="img/app-store-logo-red.png"></a>
 				</span>
 
 				<br/>
@@ -344,7 +354,7 @@ We are here to teleport you. be ready for that.
 			<div class="front">
 				
 				
-				<a class="popin-button button" data-popin="android" data-menu="android" target="_blank" class="button green">Download for Android</a>
+				<a class="popin-button button android-download" target="_blank" class="button green">Download for Android</a>
 				<span class="popin-button button" data-menu="iphone" data-popin="android">iPhone user ?</span>
 
 
@@ -399,7 +409,7 @@ We are here to teleport you. be ready for that.
 	<ul>
 		<li class="left"><a href="mailto:love@gazematic.com" target="_blank">Contact</a></li>
 		<li class="middle"><a href="#" target="_blank">Our blog</a></li>
-		<li class="right"><a href="https://www.dropbox.com/s/x6euqsg3b7x863c/presskit_teleportcall.zip?dl=0" target="_blank">Presskit</a></li>
+		<li class="right"><a class="presskit" href="javascript:;" target="_blank">Presskit</a></li>
 	</ul>
 	<span class="close-button"><i class="left"></i><i class="right"></i></span>
 </div>
@@ -441,8 +451,8 @@ We are here to teleport you. be ready for that.
 	<ul>
 		<li><a class="popin-button" data-menu="videographer" data-popin="android" target="_blank">For Videographers</a></li>
 		<li> <a class="popin-button for-advertiser" data-menu="advertiser" data-popin="android" target="_blank">For Advertisers</a></li>
-		<li id="about-button" class="popin-button no-mobile" data-popin="about"><span>About Us</span></li>
-		<li class="no-mobile"><a href="https://www.dropbox.com/s/x6euqsg3b7x863c/presskit_teleportcall.zip?dl=0" target="_blank">Presskit</a></li>
+		<li id="about-button" class="popin-button no-mobile about-button" data-popin="about"><span>About Us</span></li>
+		<li class="no-mobile"><a class="presskit" href="javascript:;" target="_blank">Presskit</a></li>
 	</ul>
 </nav>
 
