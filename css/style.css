@@ -770,6 +770,11 @@ b {
     font-size: 12px;
   }
 
+  #intro p {
+    position: static;
+    margin-bottom: 5px !important;
+}
+
   /*.iplay-store{
       content:url("../img/app-store-logo-mobile.png");
   }*/
@@ -780,6 +785,14 @@ b {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 436px) {
+
+  .publisher{
+  margin-top: -80px;
+}
+
+.publisher img{
+      width: 70px;
+}
 
   #android-popin p {
     width: 98%;
