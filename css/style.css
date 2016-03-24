@@ -705,6 +705,14 @@ b {
   border: 0px solid white !important;  
 }*/
 
+.publisher{
+  margin-top: -80px;
+}
+
+.publisher img{
+      width: 70px;
+}
+
   #android-popin p {
     width: 98%;
   }
@@ -757,7 +765,7 @@ b {
   }
 
   .kit{
-    margin-top: 55px !important;
+    margin-top: 30px !important;
     margin-left: 10px;
     font-size: 12px;
   }
